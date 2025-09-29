@@ -246,7 +246,7 @@ exports.extract = function extract (cwd, opts) {
     }
 
     function inCwd (dst) {
-      return dst.startsWith(cwd)
+      return dst === cwd || dst.startsWith(cwd + path.sep)
     }
 
     function onfile () {
